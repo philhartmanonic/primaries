@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<h1>States</h1>
+
+<div class="panel panel-default col-md-12">
+  <table class="table">
+    <th>State</th>
+    <th>Primary or Caucus</th>
+    <th>Delegates</th>
+    <th>Date</th>
+    <th colspan="2">Actions</th>
+
+
+    <% @states.each do |state| %>
+      <tr>
+        <td><%= link_to state.state_name, state %></td>
+        <td><%= state.p_or_c %></td>
+        <td><%= state.delegates %></td>
+        <td><%= state.date %></td>
+        <td><%= link_to 'Edit', edit_state_path(state) %></td>
+        <td><%= link_to 'Destroy', state, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>
+<br>
+
+<%= link_to 'New State', new_state_path %>

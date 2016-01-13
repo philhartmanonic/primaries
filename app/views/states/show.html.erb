@@ -1,0 +1,7 @@
+<p id="notice"><%= notice %></p>
+<h1><%= @state.state_name %></h1>
+<b>Primary or Caucus:</b> <%=  @state.p_or_c %><br>
+<b>Date:</b> <%= @state.date %><br>
+<b>Delegates:</b> <%= @state.delegates %><br>
+<%= link_to 'Edit', edit_state_path(@state) %> |  
+<%= link_to 'Back', states_path %>
