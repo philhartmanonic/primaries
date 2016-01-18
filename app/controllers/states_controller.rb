@@ -10,15 +10,18 @@ class StatesController < ApplicationController
   # GET /states/1
   # GET /states/1.json
   def show
+    @states = State.all
   end
 
   # GET /states/new
   def new
+    @states = State.all
     @state = State.new
   end
 
   # GET /states/1/edit
   def edit
+    @states = State.all
   end
 
   # POST /states
@@ -69,6 +72,6 @@ class StatesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def state_params
-      params.require(:state).permit(:state_name, :p_or_c, :date, :delegates, :district, :at_large, :rnc, :state_winner)
+      params.require(:state).permit(:state_name, :p_or_c, :date, :delegates, :district, :at_large, :rnc, :state_winner, :map)
     end
 end

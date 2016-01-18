@@ -11,14 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151229232304) do
+ActiveRecord::Schema.define(version: 20160118183008) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "states", force: :cascade do |t|
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
     t.string   "state_name"
     t.string   "p_or_c"
     t.date     "date"
@@ -27,6 +27,10 @@ ActiveRecord::Schema.define(version: 20151229232304) do
     t.integer  "at_large"
     t.integer  "rnc"
     t.integer  "state_winner"
+    t.string   "map_file_name"
+    t.string   "map_content_type"
+    t.integer  "map_file_size"
+    t.datetime "map_updated_at"
   end
 
 end

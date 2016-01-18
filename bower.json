@@ -1,0 +1,21 @@
+{
+  "name": "primaries",
+  "homepage": "https://github.com/philhartmanonic/primaries",
+  "authors": [
+    "Galen Burghardt <galen.w.burghardt@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation-apps": "~1.2.0"
+  }
+}

@@ -1,11 +1,28 @@
-<nav class="top-bar" data-topbar role="navigation">
-	<ul class="title-area">
-		<li class="name">
-			<h1><a href="/">Primary Season</a></h1>
-		</li>
+    <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
+      <button class="menu-icon" type="button" data-toggle></button>
+      <div class="title-bar-title">Menu</div>
+    </div>
 
-		<li class="toggle-topbar">
-			<a href="#"><span>Menu</span></a>
-		</li>
-	</ul>
-</nav>
+    <div class="top-bar" id="main-menu">
+      <div class="top-bar-left">
+        <ul class="dropdown menu" data-dropdown-menu>
+          <li class="menu-text"><%= link_to 'Primaries and Caucuses', states_path %></li>
+        </ul>
+      </div>
+      <div class="top-bar-right">
+        <ul class="menu vertical medium-horizontal" data-responsive-menu="drilldown medium-dropdown">
+          <li><%= link_to 'Home', states_path %>
+          <li class="has-submenu">
+            <a href="#">States</a>
+            <ul class="submenu menu vertical" data-submenu>
+              <% @states.each do |f| %>
+                <li><%= link_to f.state_name, f %></li>
+              <% end %>
+            </ul>
+          </li>
+          <li><%= link_to 'New State', new_state_path %></li>
+        </ul>
+      </div>
+    </div>
+    <br>
+    <br>
